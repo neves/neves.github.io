@@ -33,7 +33,7 @@
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build -b master",
     "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "build": "GENERATE_SOURCEMAP=false REACT_APP_BUILD_TIME=$(date +%F_%R) react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
