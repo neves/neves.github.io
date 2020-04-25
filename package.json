@@ -30,10 +30,10 @@
     "styled-components": "^5.0.1"
   },
   "scripts": {
-    "predeploy": "yarn build",
+    "predeploy": "GENERATE_SOURCEMAP=false yarn build",
     "deploy": "./scripts/deploy.sh",
     "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false REACT_APP_BUILD_TIME=$(date +%F_%R) react-scripts build",
+    "build": "REACT_APP_BUILD_TIME=$(date +'%d/%m/%y %H:%M') react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
