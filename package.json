@@ -11,6 +11,9 @@
     "test": "react-scripts test",
     "size": "bundlesize",
     "limit": "size-limit",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "analyze:bundle": "cra-bundle-analyzer",
+    "limit:why": "size-limit --why",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -77,6 +80,8 @@
   "devDependencies": {
     "@size-limit/preset-app": "^4.4.5",
     "bundlesize": "^0.18.0",
-    "size-limit": "^4.4.5"
+    "cra-bundle-analyzer": "^0.0.3",
+    "size-limit": "^4.4.5",
+    "source-map-explorer": "^2.4.2"
   }
 }
