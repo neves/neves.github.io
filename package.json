@@ -9,11 +9,33 @@
     "start": "react-scripts start",
     "build": "REACT_APP_BUILD_TIME=$(date +'%d/%m/%y %H:%M') react-scripts build",
     "test": "react-scripts test",
+    "size": "bundlesize",
+    "limit": "size-limit",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
+  "bundlesize": [
+    {
+      "path": "./build/static/js/2.*.chunk.js",
+      "maxSize": "2.69 MB"
+    },
+    {
+      "path": "./build/static/js/main.*.chunk.js",
+      "maxSize": "5.63 KB"
+    }
+  ],
+  "size-limit": [
+    {
+      "path": "./build/static/js/2.*.chunk.js",
+      "limit": "2.69 MB"
+    },
+    {
+      "path": "./build/static/js/main.*.chunk.js",
+      "limit": "5.63 KB"
+    }
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
@@ -53,6 +75,8 @@
     "styled-components": "^5.0.1"
   },
   "devDependencies": {
-    "bundlesize": "^0.18.0"
+    "@size-limit/preset-app": "^4.4.5",
+    "bundlesize": "^0.18.0",
+    "size-limit": "^4.4.5"
   }
 }
